@@ -1,0 +1,8 @@
+Django>=4.2
+python-decouple
+django-tailwind
+django-browser-reload
+openai
+psycopg2-binary
+python-dotenv
+

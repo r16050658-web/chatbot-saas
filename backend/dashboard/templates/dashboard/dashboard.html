@@ -1,0 +1,23 @@
+{% extends 'base.html' %}{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="max-w-5xl mx-auto py-8">
+  <h1 class="text-2xl font-semibold text-slate-800">Dashboard</h1>
+  <div class="mt-6 grid sm:grid-cols-3 gap-4">
+    <div class="rounded-2xl border p-4 bg-white">
+      <div class="text-slate-500 text-sm">Chatbots</div>
+      <div class="text-3xl font-bold">{{ bots_count }}</div>
+    </div>
+    <div class="rounded-2xl border p-4 bg-white">
+      <div class="text-slate-500 text-sm">Messages</div>
+      <div class="text-3xl font-bold">{{ msgs_count }}</div>
+    </div>
+    <div class="rounded-2xl border p-4 bg-white">
+      <div class="text-slate-500 text-sm">Tokens Left</div>
+      <div class="text-3xl font-bold">{{ tokens }}</div>
+    </div>
+  </div>
+  <div class="mt-6">
+    <a href="{% url 'bot:list' %}" class="px-4 py-2 rounded-xl bg-sky-600 text-white">Go to Bots</a>
+  </div>
+</div>
+{% endblock %}
